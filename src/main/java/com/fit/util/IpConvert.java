@@ -17,7 +17,6 @@ public final class IpConvert {
 
     /**
      * 将字符串形式的ip地址转换为BigInteger
-     *
      * @param ipInString 字符串形式的ip地址
      * @return 整数形式的ip地址
      */
