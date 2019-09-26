@@ -18,4 +18,8 @@ public interface UserService {
 
     List<User> queryUsersByMap(Map map);
 
+    long queryMaxUserId();
+
+    int insertUsersByTable(String table, List<User> users);
+
 }

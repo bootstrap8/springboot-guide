@@ -49,4 +49,14 @@ public class UserServiceImpl implements UserService {
         log.info("queryUsersByMap params : {}", map);
         return userDao.queryUsersByMap(map);
     }
+
+    @Override
+    public long queryMaxUserId() {
+        return userDao.queryMaxUserId();
+    }
+
+    @Override
+    public int insertUsersByTable(String table, List<User> users) {
+        return userDao.insertUsersByTable(table, users);
+    }
 }

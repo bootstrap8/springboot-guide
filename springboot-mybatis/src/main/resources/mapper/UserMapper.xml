@@ -32,5 +32,31 @@
         </foreach>
     </select>
 
+    <select id="queryMaxUserId" resultType="java.lang.Long">
+        select max(id) from tab_user
+    </select>
+
+    <insert id="insertUsersByTable">
+        insert into ${table}
+        (id,
+        name,
+        age,
+        address,
+        birthday)
+        select st.*
+        from
+        (
+        <foreach collection="users" item="item" index="index" separator="union all">
+            select
+            #{item.id} id,
+            #{item.name} name,
+            #{item.age} age,
+            #{item.address} address,
+            #{item.birthday} birthday
+            from dual
+        </foreach>
+        ) st
+    </insert>
+
 
 </mapper>

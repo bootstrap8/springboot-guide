@@ -20,6 +20,7 @@
     <modules>
         <module>springboot-mybatis</module>
         <module>springboot-datasource</module>
+        <module>springboot-application</module>
     </modules>
 
     <properties>
