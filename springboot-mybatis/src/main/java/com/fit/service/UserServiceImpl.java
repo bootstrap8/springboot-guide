@@ -36,12 +36,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> querySthUsersByName(QueryVo queryVo) {
-        //return userDao.querySthUsersByName(queryVo.getColumns(), queryVo.getNames());
-        Map map = Maps.newHashMap();
-        map.put("columns", queryVo.getColumns());
-        map.put("names", queryVo.getNames());
-
-        return queryUsersByMap(map);
+        return userDao.querySthUsersByName(queryVo.getColumns(), queryVo.getNames());
     }
 
     @Override
