@@ -1,6 +1,7 @@
 package com.fit.user.service;
 
-import com.fit.user.dao.entity.User;
+import com.fit.common.response.ResponseVo;
+import com.fit.user.dao.entity.UserEntity;
 
 import java.util.List;
 import java.util.Map;
@@ -12,17 +13,17 @@ import java.util.Map;
  */
 public interface UserService {
 
-    int addUser(User user);
+    int addUser(UserEntity user);
 
-    List<User> queryAllUsers();
+    ResponseVo queryAllUsers();
 
-    List<User> queryUsersByName(List<String> names);
+    List<UserEntity> queryUsersByName(List<String> names);
 
-//    List<User> querySthUsersByName(QueryVo queryVo);
+//    List<UserEntity> querySthUsersByName(QueryVo queryVo);
 
-    List<User> queryUsersByMap(Map map);
+    List<UserEntity> queryUsersByMap(Map map);
 
     long queryMaxUserId();
 
-    int insertUsersByTable(String table, List<User> users);
+    int insertUsersByTable(String table, List<UserEntity> users);
 }

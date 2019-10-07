@@ -1,7 +1,9 @@
 package com.fit.user.service;
 
+import com.fit.common.response.ResponseVo;
+import com.fit.order.dao.OrderDao;
 import com.fit.user.dao.UserDao;
-import com.fit.user.dao.entity.User;
+import com.fit.user.dao.entity.UserEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,28 +23,32 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private OrderDao orderDao;
+
     @Override
-    public int addUser(User user) {
+    public int addUser(UserEntity user) {
         return userDao.insert(user);
     }
 
     @Override
-    public List<User> queryAllUsers() {
-        return userDao.queryAllUsers();
+    public ResponseVo queryAllUsers() {
+        log.info("Order : {}", orderDao.queryUsers());
+        return ResponseVo.okFrom(userDao.queryAllUsers());
     }
 
     @Override
-    public List<User> queryUsersByName(List<String> names) {
+    public List<UserEntity> queryUsersByName(List<String> names) {
         return userDao.queryUsersByName(names);
     }
 
 //    @Override
-//    public List<User> querySthUsersByName(QueryVo queryVo) {
+//    public List<UserEntity> querySthUsersByName(QueryVo queryVo) {
 //        return userDao.querySthUsersByName(queryVo.getColumns(), queryVo.getNames());
 //    }
 
     @Override
-    public List<User> queryUsersByMap(Map map) {
+    public List<UserEntity> queryUsersByMap(Map map) {
         log.info("queryUsersByMap params : {}", map);
         return userDao.queryUsersByMap(map);
     }
@@ -53,7 +59,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int insertUsersByTable(String table, List<User> users) {
+    public int insertUsersByTable(String table, List<UserEntity> users) {
         return userDao.insertUsersByTable(table, users);
     }
 

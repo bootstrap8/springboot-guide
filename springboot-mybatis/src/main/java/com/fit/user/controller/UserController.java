@@ -1,6 +1,7 @@
 package com.fit.user.controller;
 
-import com.fit.user.dao.entity.User;
+import com.fit.common.response.ResponseVo;
+import com.fit.user.dao.entity.UserEntity;
 import com.fit.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -27,28 +28,28 @@ public class UserController {
 
     @ResponseBody
     @PostMapping("/add")
-    public int addUser(User user) {
+    public int addUser(UserEntity user) {
         return userService.addUser(user);
     }
 
     @ResponseBody
     @ApiOperation(value = "查询所有用户", notes = "查询所有用户")
     @RequestMapping(value = "/queryAllUsers", method = {RequestMethod.POST, RequestMethod.GET})
-    public List<User> queryAllUsers() {
+    public ResponseVo queryAllUsers() {
         return userService.queryAllUsers();
     }
 
 
     @ResponseBody
     @RequestMapping(value = "/queryUsersByName", method = RequestMethod.POST)
-    public List<User> queryUsersByName(@RequestBody List<String> names) {
+    public List<UserEntity> queryUsersByName(@RequestBody List<String> names) {
         return userService.queryUsersByName(names);
     }
 
 //    @ResponseBody
 //    @ApiOperation(value = "查询用户指定字段", notes = "查询所有用户")
 //    @RequestMapping(value = "/querySthUsersByName", method = RequestMethod.POST)
-//    public List<User> querySthUsersByName(@RequestBody QueryVo queryVo) {
+//    public List<UserEntity> querySthUsersByName(@RequestBody QueryVo queryVo) {
 //        log.info("method:{}, param:{}", "querySthUsersByName", queryVo);
 //        return userService.querySthUsersByName(queryVo);
 //    }

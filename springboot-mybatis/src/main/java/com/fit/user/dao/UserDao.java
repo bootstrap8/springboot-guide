@@ -1,6 +1,6 @@
 package com.fit.user.dao;
 
-import com.fit.user.dao.entity.User;
+import com.fit.user.dao.entity.UserEntity;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -13,15 +13,15 @@ import java.util.Map;
  */
 public interface UserDao {
 
-    int insert(User user);
+    int insert(UserEntity user);
 
-    List<User> queryAllUsers();
+    List<UserEntity> queryAllUsers();
 
-    List<User> queryUsersByName(List<String> names);
+    List<UserEntity> queryUsersByName(List<String> names);
 
-    List<User> querySthUsersByName(@Param("columns") String columns, @Param("names") List<String> names);
+    List<UserEntity> querySthUsersByName(@Param("columns") String columns, @Param("names") List<String> names);
 
-    List<User> queryUsersByMap(Map map);
+    List<UserEntity> queryUsersByMap(Map map);
 
     Long queryMaxUserId();
 
@@ -32,5 +32,5 @@ public interface UserDao {
      * @param users
      * @return
      */
-    int insertUsersByTable(@Param("table") String table, @Param("users") List<User> users);
+    int insertUsersByTable(@Param("table") String table, @Param("users") List<UserEntity> users);
 }

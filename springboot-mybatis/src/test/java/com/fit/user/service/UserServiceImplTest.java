@@ -1,7 +1,7 @@
 package com.fit.user.service;
 
 import com.fit.SpringbootGuideApplication;
-import com.fit.user.dao.entity.User;
+import com.fit.user.dao.entity.UserEntity;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,9 +27,9 @@ public class UserServiceImplTest {
     @Test
     public void insertUsersByTable() {
         String table = "tab_user";
-        List<User> users = Lists.newArrayList();
+        List<UserEntity> users = Lists.newArrayList();
         Long maxId = userService.queryMaxUserId();
-        User user = new User();
+        UserEntity user = new UserEntity();
         user.setId(maxId + 1);
         user.setName("Test");
         user.setAge(20);
