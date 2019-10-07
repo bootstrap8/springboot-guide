@@ -16,16 +16,23 @@ public class SwaggerConfig {
 
     @Bean
     public Docket createRestApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .select()
+        return new Docket(DocumentationType.SWAGGER_2).groupName("用户管理")
+                .apiInfo(apiInfo()).select()
                 .apis(RequestHandlerSelectors.basePackage("com.fit.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
+    @Bean
+    public Docket createSceneRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2).groupName("订单管理").select()
+                .apis(RequestHandlerSelectors.basePackage("com.fit.controller"))
+                .paths(PathSelectors.any()).build();
+    }
+
+
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("Spring Boot中使用Swagger构建Rest Api")
-                .version("1.0").build();
+        return new ApiInfoBuilder().title("Spring Boot - Swagger Api File").description("Mybatis-Boot")
+                .termsOfServiceUrl("http://ip:port/activity").version("1.0").build();
     }
 }

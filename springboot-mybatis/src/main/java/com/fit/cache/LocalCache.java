@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
  */
 @Component("localCache")
 public class LocalCache implements Cache {
+
     @Override
     public boolean set(String key, String value) {
         return false;
