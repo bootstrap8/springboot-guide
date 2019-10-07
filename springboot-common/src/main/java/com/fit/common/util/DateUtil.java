@@ -1,4 +1,4 @@
-package com.fit.util;
+package com.fit.common.util;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

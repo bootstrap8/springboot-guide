@@ -1,5 +1,6 @@
 package com.fit.bean;
 
+import com.fit.common.util.JsonUtil;
 import lombok.Data;
 
 import java.util.List;
@@ -8,4 +9,8 @@ import java.util.List;
 public class QueryVo {
     private String columns;
     private List<String> names;
+
+    public static void main(String[] args) {
+        System.out.println(JsonUtil.toJson(new QueryVo()));
+    }
 }
