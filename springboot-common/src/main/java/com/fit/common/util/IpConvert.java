@@ -1,4 +1,4 @@
-package com.fit.util;
+package com.fit.common.util;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

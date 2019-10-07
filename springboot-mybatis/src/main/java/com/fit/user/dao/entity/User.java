@@ -1,9 +1,8 @@
-package com.fit.bean;
+package com.fit.user.dao.entity;
 
 import lombok.Data;
 
 import java.util.Date;
-
 
 @Data
 public class User {

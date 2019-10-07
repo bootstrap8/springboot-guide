@@ -1,4 +1,4 @@
-package com.fit.util;
+package com.fit.common.util;
 
 import java.util.ArrayList;
 import java.util.List;

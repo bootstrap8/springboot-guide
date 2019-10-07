@@ -1,4 +1,4 @@
-package com.fit.bean;
+package com.fit.user.bean;
 
 import com.fit.common.util.JsonUtil;
 import lombok.Data;

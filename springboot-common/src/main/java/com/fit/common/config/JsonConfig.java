@@ -1,4 +1,4 @@
-package com.fit.config;
+package com.fit.common.config;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;

@@ -1,7 +1,7 @@
-package com.fit.service;
+package com.fit.user.service;
 
-import com.fit.bean.User;
-import com.fit.springbootguide.SpringbootGuideApplication;
+import com.fit.SpringbootGuideApplication;
+import com.fit.user.dao.entity.User;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;

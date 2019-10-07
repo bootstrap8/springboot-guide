@@ -1,9 +1,7 @@
-package com.fit.controller;
+package com.fit.user.controller;
 
-import com.fit.bean.QueryVo;
-import com.fit.bean.User;
-import com.fit.cache.Cache;
-import com.fit.service.UserService;
+import com.fit.user.dao.entity.User;
+import com.fit.user.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -47,12 +45,12 @@ public class UserController {
         return userService.queryUsersByName(names);
     }
 
-    @ResponseBody
-    @ApiOperation(value = "查询用户指定字段", notes = "查询所有用户")
-    @RequestMapping(value = "/querySthUsersByName", method = RequestMethod.POST)
-    public List<User> querySthUsersByName(@RequestBody QueryVo queryVo) {
-        log.info("method:{}, param:{}", "querySthUsersByName", queryVo);
-        return userService.querySthUsersByName(queryVo);
-    }
+//    @ResponseBody
+//    @ApiOperation(value = "查询用户指定字段", notes = "查询所有用户")
+//    @RequestMapping(value = "/querySthUsersByName", method = RequestMethod.POST)
+//    public List<User> querySthUsersByName(@RequestBody QueryVo queryVo) {
+//        log.info("method:{}, param:{}", "querySthUsersByName", queryVo);
+//        return userService.querySthUsersByName(queryVo);
+//    }
 
 }

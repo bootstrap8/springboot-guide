@@ -1,11 +1,16 @@
-package com.fit.dao;
+package com.fit.user.dao;
 
-import com.fit.bean.User;
+import com.fit.user.dao.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Stone (300482)
+ * @version 1.0
+ * @since 2019-10-07
+ */
 public interface UserDao {
 
     int insert(User user);
@@ -22,6 +27,7 @@ public interface UserDao {
 
     /**
      * 动态根据表名插入，适用于月表
+     *
      * @param table
      * @param users
      * @return

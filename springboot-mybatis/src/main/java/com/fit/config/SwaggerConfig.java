@@ -18,7 +18,7 @@ public class SwaggerConfig {
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2).groupName("用户管理")
                 .apiInfo(apiInfo()).select()
-                .apis(RequestHandlerSelectors.basePackage("com.fit.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.fit.user.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
