@@ -22,6 +22,7 @@
         <module>springboot-datasource</module>
         <module>springboot-application</module>
         <module>springboot-common</module>
+        <module>springboot-jpa</module>
         <module>springboot-h2</module>
     </modules>
 
