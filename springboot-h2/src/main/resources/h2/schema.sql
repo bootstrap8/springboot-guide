@@ -1,0 +1,5 @@
+CREATE TABLE tab_user (
+	id INT(11) NOT NULL AUTO_INCREMENT primary key ,
+	NAME VARCHAR(100) NOT NULL,
+	address VARCHAR(40) NOT NULL
+);
