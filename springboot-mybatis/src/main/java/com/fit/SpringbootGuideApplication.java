@@ -7,7 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @MapperScan("com.fit.*.dao")
-//@ComponentScan(basePackages = {"com.fit"})
 public class SpringbootGuideApplication {
 
     public static void main(String[] args) {
