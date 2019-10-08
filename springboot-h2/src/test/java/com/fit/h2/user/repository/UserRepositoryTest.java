@@ -29,8 +29,6 @@ public class UserRepositoryTest {
         user.setId(100);
         user.setName("Mark");
         user.setAddress("BJ");
-//        user.setAge(19);
-//        user.setCity("北京");
         userRepository.save(user);
 
         Optional<UserEntity> optionalUser = userRepository.findById(1);
