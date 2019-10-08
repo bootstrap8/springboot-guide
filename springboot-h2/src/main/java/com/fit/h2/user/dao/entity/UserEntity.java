@@ -1,8 +1,6 @@
-package com.fit.h2.user.repository.entity;
+package com.fit.h2.user.dao.entity;
 
 import lombok.Data;
-
-import javax.persistence.*;
 
 /**
  * @author Stone (300482)
@@ -10,11 +8,7 @@ import javax.persistence.*;
  * @since 2019-10-07
  */
 @Data
-@Entity
-@Table(name = "tab_user")
 public class UserEntity {
-    @Id //主键
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String address;

@@ -1,8 +1,9 @@
 package com.fit.h2.user.controller;
 
 import com.fit.common.response.ResponseVo;
-import com.fit.h2.user.repository.entity.UserEntity;
+import com.fit.h2.user.dao.entity.UserEntity;
 import com.fit.h2.user.service.UserService;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Slf4j
 @RestController
+@Api(value = "用户管理", description = "UserController")
 public class UserController {
 
     @Autowired

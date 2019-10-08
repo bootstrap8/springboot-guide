@@ -1,7 +1,7 @@
 package com.fit.h2.user.service;
 
 import com.fit.common.response.ResponseVo;
-import com.fit.h2.user.repository.entity.UserEntity;
+import com.fit.h2.user.dao.entity.UserEntity;
 
 /**
  * @author Stone (300482)
