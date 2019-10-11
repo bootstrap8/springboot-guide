@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.fit.h2.*.dao")
-public class SpringbootGuideApplication {
+public class H2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootGuideApplication.class, args);
+        SpringApplication.run(H2Application.class, args);
     }
 
 }
