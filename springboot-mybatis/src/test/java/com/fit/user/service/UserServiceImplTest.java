@@ -1,6 +1,6 @@
 package com.fit.user.service;
 
-import com.fit.SpringbootGuideApplication;
+import com.fit.MybatisApplication;
 import com.fit.user.dao.entity.UserEntity;
 import com.google.common.collect.Lists;
 import org.junit.Test;
@@ -18,7 +18,7 @@ import java.util.List;
  * @since 2019-09-26
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringbootGuideApplication.class)
+@SpringBootTest(classes = MybatisApplication.class)
 public class UserServiceImplTest {
 
     @Autowired

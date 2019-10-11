@@ -10,6 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @since 2019-09-26
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringbootGuideApplication.class)
+@SpringBootTest(classes = MybatisApplication.class)
 public class BaseTest {
 }

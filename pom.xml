@@ -23,6 +23,7 @@
         <module>springboot-application</module>
         <module>springboot-common</module>
         <module>springboot-h2</module>
+        <module>springboot-jpa</module>
     </modules>
 
     <properties>
