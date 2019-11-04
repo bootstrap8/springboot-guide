@@ -3,6 +3,7 @@ package com.fit.h2.user.dao;
 import com.fit.h2.user.dao.entity.UserEntity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
