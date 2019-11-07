@@ -15,7 +15,7 @@ import java.util.Arrays;
  */
 @Slf4j
 @Component
-public class ConfigLogger {
+public class ConfigPrinter {
 
     @Autowired
     private Environment environment;
@@ -29,5 +29,13 @@ public class ConfigLogger {
         log.info("SpringBoot-H2 property foo : {}", environment.getProperty("foo"));
         log.info("SpringBoot-H2 property spring.cloud.zookeeper.enabled : {}", environment.getProperty("spring.cloud.zookeeper.enabled"));
         log.info("SpringBoot-H2 property spring.cloud.zookeeper.connect : {}", environment.getProperty("spring.cloud.zookeeper.connect"));
+
+        log.info("jar.out.application.key - jar.out.application.key:{}", environment.getProperty("jar.out.application.key"));
+        log.info("config.application.key - config.application.key:{}", environment.getProperty("config.application.key"));
+        log.info("jar.out.application.dev.key - jar.out.application.dev.key:{}", environment.getProperty("jar.out.application.dev.key"));
+
+
+
+
     }
 }
