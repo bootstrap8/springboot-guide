@@ -1,7 +1,9 @@
 package com.fit.h2.config;
 
+import com.fit.h2.user.Poster;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.scheduling.TaskScheduler;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 
@@ -19,6 +21,12 @@ public class Config {
         taskScheduler.setPoolSize(2);
         taskScheduler.setThreadNamePrefix("sb-job-");
         return taskScheduler;
+    }
+
+    @Bean
+    @Lazy
+    public Poster setup() {
+        return new Poster();
     }
 
 }

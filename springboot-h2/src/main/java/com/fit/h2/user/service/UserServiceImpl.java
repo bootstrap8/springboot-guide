@@ -1,6 +1,7 @@
 package com.fit.h2.user.service;
 
 import com.fit.common.response.ResponseVo;
+import com.fit.h2.user.Poster;
 import com.fit.h2.user.dao.UserDao;
 import com.fit.h2.user.dao.entity.UserEntity;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +21,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserDao userDao;
+
+    @Autowired
+    private Poster poster;
 
     @Override
     public ResponseVo queryUsers() {

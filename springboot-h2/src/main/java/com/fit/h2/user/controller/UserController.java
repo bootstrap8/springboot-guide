@@ -1,6 +1,7 @@
 package com.fit.h2.user.controller;
 
 import com.fit.common.response.ResponseVo;
+import com.fit.h2.user.Poster;
 import com.fit.h2.user.dao.entity.UserEntity;
 import com.fit.h2.user.service.UserService;
 import io.swagger.annotations.Api;
