@@ -24,6 +24,7 @@
         <module>springboot-common</module>
         <module>springboot-h2</module>
         <module>springboot-jpa</module>
+        <module>springboot-example</module>
     </modules>
 
     <properties>
