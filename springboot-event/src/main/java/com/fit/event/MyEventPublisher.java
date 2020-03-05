@@ -24,7 +24,7 @@ public class MyEventPublisher implements ApplicationEventPublisherAware {
     }
 
 
-    //@PostConstruct不能被listener接收？！
+    //@PostConstruct不能被listener接收,是因为listener注册在bean实例化之后
     @PostConstruct
     public void setUp() {
         publisher.publishEvent(new MyEvent("SetUp"));
