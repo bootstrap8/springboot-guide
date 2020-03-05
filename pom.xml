@@ -25,6 +25,7 @@
         <module>springboot-h2</module>
         <module>springboot-jpa</module>
         <module>springboot-example</module>
+        <module>springboot-event</module>
     </modules>
 
     <properties>

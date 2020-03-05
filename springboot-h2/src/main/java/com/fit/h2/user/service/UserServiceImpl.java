@@ -6,6 +6,7 @@ import com.fit.h2.user.dao.UserDao;
 import com.fit.h2.user.dao.entity.UserEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,9 @@ import java.util.List;
 @Slf4j
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Value("${ip:127.0.0.1}")
+    private String ip;
 
     @Autowired
     private UserDao userDao;
