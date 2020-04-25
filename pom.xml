@@ -26,6 +26,7 @@
         <module>springboot-jpa</module>
         <module>springboot-example</module>
         <module>springboot-event</module>
+        <module>springcloud-gateway</module>
     </modules>
 
     <properties>
