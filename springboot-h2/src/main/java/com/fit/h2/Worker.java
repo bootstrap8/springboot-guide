@@ -56,10 +56,10 @@ public class Worker {
         if (Thread.State.TERMINATED == sender.getState() && !sender.isAlive()) {
             //heartbeat test
             running = true;
-            sender = new Sender("SenderThread");
+            resetCounter.incrementAndGet();
+            sender = new Sender("SenderThread-" + resetCounter.get());
             sender.start();
             log.info("reOpen Sender Thread successfully!");
-            resetCounter.incrementAndGet();
         }
         log.info("reset Sender : {}", resetCounter.get());
         return ResponseVo.okFrom("Reset Times: " + resetCounter.get());
