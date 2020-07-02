@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import java.util.Date;
 
@@ -23,6 +24,8 @@ public class DataSourceService {
     @Resource
     private JdbcTemplate historyJdbcTemplate;
 
+
+    @PostConstruct
     public void save() {
         try {
             String birthday = DateUtil.format(new Date());

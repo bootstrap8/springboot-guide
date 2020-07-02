@@ -27,6 +27,7 @@
         <module>springboot-example</module>
         <module>springboot-event</module>
         <module>springcloud-gateway</module>
+        <module>springboot-kafka</module>
     </modules>
 
     <properties>

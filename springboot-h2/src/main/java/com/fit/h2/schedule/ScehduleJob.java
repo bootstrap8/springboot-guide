@@ -15,7 +15,7 @@ public class ScehduleJob {
 
     @Scheduled(cron = "0/5 * * * * *")
     public void first() {
-        log.info("execute job <0 0 0/1 * * ?>");
+        log.info("execute job <0/5 * * * * *>");
     }
 
     @Scheduled(initialDelay = 1000, fixedRate = 5000)
