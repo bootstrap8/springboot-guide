@@ -59,5 +59,13 @@
         ) st
     </insert>
 
+    <insert id="saveUserBatch">
+        INSERT INTO tab_user(ename,gender,email,did)
+        VALUES
+        <foreach collection="emps" item="emp" separator=",">
+            (#{emp.eName},#{emp.gender},#{emp.email},#{emp.dept.id})
+        </foreach>
+    </insert>
+
 
 </mapper>
