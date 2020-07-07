@@ -6,6 +6,8 @@ import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Arrays;
 
 /**
@@ -21,7 +23,7 @@ public class ConfigPrinter {
     private Environment environment;
 
     @PostConstruct
-    public void logProfile(){
+    public void logProfile() throws UnknownHostException {
         String[] activeProfiles = environment.getActiveProfiles();
         String[] defaultProfiles = environment.getDefaultProfiles();
         log.info("SpringBoot-H2 Environment active profiles : {}", Arrays.asList(activeProfiles));
@@ -34,8 +36,10 @@ public class ConfigPrinter {
         log.info("config.application.key - config.application.key:{}", environment.getProperty("config.application.key"));
         log.info("jar.out.application.dev.key - jar.out.application.dev.key:{}", environment.getProperty("jar.out.application.dev.key"));
 
-
-
+        log.info("------------------------------------------------------------");
+        InetAddress address = InetAddress.getLocalHost();
+        log.info("localhost.ip={}", address.getHostAddress());
+        log.info("h2.var.replace={}", environment.getProperty("h2.var.replace"));
 
     }
 }
