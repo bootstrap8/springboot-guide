@@ -59,11 +59,11 @@
         ) st
     </insert>
 
-    <insert id="saveUserBatch">
-        INSERT INTO tab_user(ename,gender,email,did)
+    <insert id="saveMonitorThreshold">
+        INSERT INTO tms_monitor_threshold(app_name,module_name,module_name_en,threshold_value,phone_number,ivr_type,is_enable)
         VALUES
-        <foreach collection="emps" item="emp" separator=",">
-            (#{emp.eName},#{emp.gender},#{emp.email},#{emp.dept.id})
+        <foreach collection="list" item="item" separator=",">
+            (#{item.appName},#{item.moduleName},#{item.moduleNameEn},#{item.thresholdValue},#{item.phoneNumber},#{item.ivrType},#{item.isEnable})
         </foreach>
     </insert>
 

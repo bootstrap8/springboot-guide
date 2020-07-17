@@ -13,13 +13,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class ScehduleJob {
 
-    @Scheduled(cron = "0/5 * * * * *")
+    //@Scheduled(cron = "0/5 * * * * *")
     public void first() {
         log.info("execute job <0/5 * * * * *>");
     }
 
-    @Scheduled(initialDelay = 1000, fixedRate = 5000)
+    @Scheduled(initialDelay = 1000, fixedRate = 30000)
     public void testInitialDelay() {
         log.info("job delay=1000, rate=5000");
+    }
+
+
+    @Scheduled(cron = "0 0 */1 * * *")
+    public void testRecycle() {
+        log.info("execute job <0 0 */1 * * *>");
     }
 }

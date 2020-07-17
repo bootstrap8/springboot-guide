@@ -2,6 +2,7 @@ package com.fit.h2.user.dao;
 
 import com.fit.h2.user.dao.entity.UserEntity;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * @version 1.0
  * @since 2019-10-07
  */
+//@Mapper
 public interface UserDao {
 
     @Select({"select * from tab_user"})

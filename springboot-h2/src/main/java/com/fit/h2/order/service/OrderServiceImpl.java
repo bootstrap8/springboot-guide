@@ -27,25 +27,25 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private SqlSessionTemplate sqlSessionTemplate;
 
-//    @Override
-//    public List<OrderEntity> queryAllOrders() {
-//
-//        return orderDao.queryAllOrders();
-//    }
-
     @Override
     public List<OrderEntity> queryAllOrders() {
 
-        List<OrderEntity> entityList = new ArrayList<>();
-
-        sqlSessionTemplate.select("com.fit.h2.order.dao.OrderDao.queryAllOrders", new ResultHandler() {
-            @Override
-            public void handleResult(ResultContext resultContext) {
-                //do sth...
-                entityList.add(OrderEntity.class.cast(resultContext.getResultObject()));
-            }
-        });
-
-        return entityList;
+        return orderDao.queryAllOrders();
     }
+
+//    @Override
+//    public List<OrderEntity> queryAllOrders() {
+//
+//        List<OrderEntity> entityList = new ArrayList<>();
+//
+//        sqlSessionTemplate.select("com.fit.h2.order.dao.OrderDao.queryAllOrders", new ResultHandler() {
+//            @Override
+//            public void handleResult(ResultContext resultContext) {
+//                //do sth...
+//                entityList.add(OrderEntity.class.cast(resultContext.getResultObject()));
+//            }
+//        });
+//
+//        return entityList;
+//    }
 }

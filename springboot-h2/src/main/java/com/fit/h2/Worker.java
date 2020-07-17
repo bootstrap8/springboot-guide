@@ -24,8 +24,8 @@ import java.util.concurrent.atomic.AtomicLong;
  * @since 2020-04-25
  */
 @Slf4j
-@Component
-@RestController
+//@Component
+//@RestController
 public class Worker {
 
     private BlockingQueue<Message> queue = new LinkedBlockingDeque();
