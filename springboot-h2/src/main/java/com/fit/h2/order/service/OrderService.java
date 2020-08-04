@@ -11,5 +11,7 @@ import java.util.List;
  */
 public interface OrderService {
 
+    boolean isTableExist(String tableName);
+
     List<OrderEntity> queryAllOrders();
 }

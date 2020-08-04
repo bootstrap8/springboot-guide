@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 //@MapperScan("com.fit.h2.*.dao")
 @MapperScan("com.fit.h2.*.dao")
-@ComponentScan(basePackages = {"com.fit.h2"}, basePackageClasses = {com.fit.h4.H4Application.class})
+@ComponentScan(basePackages = {"com.fit.h2"}, basePackageClasses = {com.fit.h4.H4Application.class, com.fit.h4.importguide.MyClass.class})
 //@ComponentScan(basePackages = {"com.fit.h2", "com.fit.h4"}, basePackageClasses = {com.fit.h4.H4Application.class})
 public class H2Application {
 

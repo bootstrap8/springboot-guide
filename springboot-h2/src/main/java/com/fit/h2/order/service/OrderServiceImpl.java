@@ -28,6 +28,11 @@ public class OrderServiceImpl implements OrderService {
     private SqlSessionTemplate sqlSessionTemplate;
 
     @Override
+    public boolean isTableExist(String tableName) {
+        return orderDao.ifTableExist(tableName);
+    }
+
+    @Override
     public List<OrderEntity> queryAllOrders() {
 
         return orderDao.queryAllOrders();

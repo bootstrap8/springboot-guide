@@ -2,6 +2,7 @@ package com.fit.h2.order.dao;
 
 import com.fit.h2.order.dao.entity.OrderEntity;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,4 +16,6 @@ import java.util.List;
 //@Mapper
 public interface OrderDao {
     List<OrderEntity> queryAllOrders();
+
+    boolean ifTableExist(@Param("tableName") String tableName);
 }

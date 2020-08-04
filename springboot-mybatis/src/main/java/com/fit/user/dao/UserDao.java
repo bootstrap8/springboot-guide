@@ -33,4 +33,11 @@ public interface UserDao {
      * @return
      */
     int insertUsersByTable(@Param("table") String table, @Param("users") List<UserEntity> users);
+
+    boolean ifTableExist(@Param("tableName") String tableName);
+
+    void createMonitorTable();
+
+    void createMonitorThresholdTable();
+
 }
